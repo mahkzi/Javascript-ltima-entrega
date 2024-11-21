@@ -1,70 +1,56 @@
-
+const carritoIcono = document.getElementById("contenedor-icono");
+carritoIcono.addEventListener("click", () => mostrarCarrito());
 function mostrarCarrito() {
     if (carrito.length === 0) {
-        const contenedorCarrito = document.createElement("div");
-        contenedorCarrito.className = "container-carrito";
-        carritoIcono.appendChild(contenedorCarrito);
-        const carritoHtml = document.createElement("div")
-        carritoHtml.className = "carrito-productos";
-        contenedorCarrito.appendChild(carritoHtml);
-        const mensaje = document.createElement("p");
-        mensaje.innerText = "Su carrito está vacio";
-        setTimeout(() => {
-            location.reload()
-        }, 3000);
-        carritoHtml.appendChild(mensaje);
+        const contenedorCarrito=document.getElementById("contenedor-carrito");
+        contenedorCarrito.className="contenedor-carrito";
+       const carritoVacio=document.createElement("p");
+       carritoVacio.className="carrito-vacio"
+       carritoVacio.innerText="Su carrito esta vacío";
+       contenedorCarrito.appendChild(carritoVacio);
+       setTimeout(() => {
+        location.reload()
+       }, 2000);
     } else {
-        carrito.forEach(producto => {
-            const contenedorCarrito = document.createElement("div");
-            contenedorCarrito.className = "container-carrito";
-            carritoIcono.appendChild(contenedorCarrito);
-            const carritoHtml = document.createElement("div")
-            carritoHtml.className = "carrito-productos";
-            contenedorCarrito.appendChild(carritoHtml);
-            const productosCarrito = document.createElement("div");
-            productosCarrito.className = "productos-carrito";
-            const mostrarNombre = document.createElement("p");
-            mostrarNombre.className = "texto-carrito";
-            mostrarNombre.innerText = "Producto: " + `${producto.nombre}`;
-            const mostrarPrecio = document.createElement("p");
-            mostrarPrecio.className = "texto-carrito";
-            mostrarPrecio.innerText = "Precio: " + `${producto.precio}`;
-            const mostrarCantidad = document.createElement("p")
-            mostrarCantidad.className = "texto-carrito";
-            mostrarCantidad.innerText = "Cantidad: " + `${producto.cantidad}`;
-            productosCarrito.appendChild(mostrarNombre);
-            productosCarrito.appendChild(mostrarPrecio);
-            productosCarrito.appendChild(mostrarCantidad);
-            carritoHtml.appendChild(productosCarrito);
-            /*suma de total*/
-            const totalCarrito = document.createElement("div");
-            totalCarrito.className = "contenedor-total";
-            const mostrarTotal = document.createElement("p");
-            mostrarTotal.innerText = "Total: ";
-            mostrarTotal.className = "texto-total";
-            const precioTotal = document.createElement("p");
-            precioTotal.innerText = carrito.reduce((acc, el) => acc + el.precio, 0);
-            precioTotal.className = "texto-total";
-            totalCarrito.appendChild(precioTotal);
-            totalCarrito.appendChild(mostrarTotal);
-            carritoHtml.appendChild(totalCarrito);
-            /*botones*/
-            const botonCarrito = document.createElement("div");
-            botonCarrito.className = "contenedor-botones";
-            carritoHtml.appendChild(botonCarrito);
-            const eliminarCarrito = document.createElement("button");
-            eliminarCarrito.className = "boton-eliminar";
-            eliminarCarrito.innerText = "Vaciar carrito";
-            eliminarCarrito.addEventListener("click", () => vaciarCarrito());
-            const comprar = document.createElement("button");
-            comprar.className = "boton-comprar";
-            comprar.innerText = "Proceder a la compra";
-            comprar.addEventListener("click", () => confirmarCompra());
-            botonCarrito.appendChild(eliminarCarrito);
-            botonCarrito.appendChild(comprar);
+        const contenedorCarrito=document.getElementById("contenedor-carrito");
+        contenedorCarrito.className="contenedor-carrito";
+        carrito.forEach(el => {
+            const divProductos=document.createElement("div");
+            divProductos.className="div-productos";
+            const nombreProducto=document.createElement("p");
+            nombreProducto.innerText="Producto: " + `${el.nombre}`;
+            nombreProducto.className="p-productos";
+            const cantidadProducto=document.createElement("p");
+            cantidadProducto.className="p-productos"
+            cantidadProducto.innerText="Cantidad: " + `${el.cantidad}`;
+            divProductos.appendChild(nombreProducto);
+            divProductos.appendChild(cantidadProducto);
+            contenedorCarrito.appendChild(divProductos);
         })
-    }console.log(carrito);
-   
+        const mostrarTotal=document.createElement("div");
+        mostrarTotal.className="mostrar-total";
+        mostrarTotal.innerText="Total: "
+        const precioTotal = document.createElement("p");
+        precioTotal.innerText=""
+        precioTotal.innerText = carrito.reduce((acc, el) => acc + el.precio,0.00);
+        precioTotal.className="precio-total";
+        mostrarTotal.appendChild(precioTotal);
+        contenedorCarrito.appendChild(mostrarTotal);
+        /*botones*/
+        const botonCarrito = document.createElement("div");
+       botonCarrito.className = "contenedor-botones";
+        contenedorCarrito.appendChild(botonCarrito);
+        const eliminarCarrito = document.createElement("button");
+        eliminarCarrito.className = "boton-eliminar";
+        eliminarCarrito.innerText = "Vaciar carrito";
+        eliminarCarrito.addEventListener("click", () => vaciarCarrito());
+        const comprar = document.createElement("button");
+        comprar.className = "boton-comprar";
+        comprar.innerText = "Proceder a la compra";
+        comprar.addEventListener("click", () => confirmarCompra());
+        botonCarrito.appendChild(eliminarCarrito);
+        botonCarrito.appendChild(comprar);
+    }
 };
 function vaciarCarrito() {
     Swal.fire({
@@ -88,8 +74,6 @@ function confirmarCompra() {
     }, 3000);
     ;
 }
-const carritoIcono = document.getElementById("contenedor-icono");
-carritoIcono.addEventListener("click", () => mostrarCarrito());
 // header index
 
 const container = document.getElementById("main-container");
@@ -144,13 +128,10 @@ function agregarAlCarrito(producto) {
         Toastify({
 
             text: "Su producto se agregó correctamente al carrito",
-            backgroundColor: "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(112,13,233,1) 37%, rgba(0,212,255,1) 100%)",
+           stylebackground: "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(112,13,233,1) 37%, rgba(0,212,255,1) 100%)",
             duration: 3000
 
         }).showToast();
-        setTimeout(() => {
-            location.reload()
-        }, 3500);
     } else {
         const nuevoProducto = {
             id: producto.id,
@@ -162,13 +143,10 @@ function agregarAlCarrito(producto) {
         Toastify({
 
             text: "Su producto se agregó correctamente al carrito",
-            backgroundColor: "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(112,13,233,1) 37%, rgba(0,212,255,1) 100%)",
+            stylebackground: "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(112,13,233,1) 37%, rgba(0,212,255,1) 100%)",
             duration: 3000
 
         }).showToast();
-        setTimeout(() => {
-            location.reload()
-        }, 3500);
     }
     localStorage.setItem("carrito", JSON.stringify(carrito));
 };
