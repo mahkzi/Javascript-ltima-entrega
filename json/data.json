@@ -1,0 +1,74 @@
+[
+    {
+    "id":1,
+    "nombre": "Da Vinci",
+    "precio": 29.99,
+    "imagen":"../assets/Eames-blanco-600x629-1-e1693398098543.jpg"
+},
+{
+   "id":2,
+   "nombre":"Donatello",
+   "precio": 32.99,
+   "imagen":"../assets/silla blanca.jpg"
+},
+{
+    "id":3,
+   "nombre":"Miguel Ángel",
+   "precio":24.99,
+   "imagen":"../assets/sila negra.jpg"
+},
+{
+    "id":4,
+   "nombre":"Rafael",
+   "precio":19.99,
+   "imagen":"../assets/silla gris.png"
+},
+{
+    "id":5,
+    "nombre":"Botticelli",
+    "precio":39.99,
+    "imagen":"../assets/sillon naranja.jpg"
+},
+{
+    "id":6,
+    "nombre":"Vecellio",
+    "precio":49.99,
+    "imagen":"../assets/sillon gris.jpg"
+},
+{
+    "id":7,
+    "nombre":"Ángelico",
+    "precio":35.99,
+    "imagen":"../assets/sillon blanco.jpg"
+},
+{
+    "id":8,
+    "nombre":"Masaccio",
+    "precio":27.99,
+    "imagen":"../assets/sillon celeste.webp"
+},
+{
+    "id":9,
+    "nombre":"Durero",
+    "precio":89.99,
+    "imagen":"../assets/a-quien-se-leocurrio-esta-mesa.webp"
+},
+{
+    "id":10,
+    "nombre":"Caravaggio",
+    "precio":79.99,
+    "imagen":"../assets/mesa-madera.jpg"
+},
+{
+    "id":11,
+    "nombre":"Bellini",
+    "precio":67.99,
+    "imagen":"../assets/mesa blanca.jpg"
+},
+{
+    "id":12,
+    "nombre":"Vasari",
+    "precio":51.99,
+    "imagen":"../assets/mesa-gris-fea.jpg"
+}
+]

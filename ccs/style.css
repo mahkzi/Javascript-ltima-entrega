@@ -1,0 +1,271 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navegador {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid grey;
+}
+
+.contenedor-li {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+
+.lista {
+    margin: 10px;
+    padding: 3px;
+    list-style-type: none;
+}
+
+.links {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: 1s;
+}
+
+.links:hover {
+    font-size: 1.7rem;
+    text-decoration: underline;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.contenedor-icono {
+    margin-left: 230px;
+}
+
+.img:hover {
+    cursor: pointer;
+}
+
+.container-carrito {
+    position: absolute;
+    right: 500px;
+    float: auto;
+    height: 100px;
+    width: 300px;
+}
+
+.titulo-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    margin-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.contenedor-cartitas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+    row-gap: 10px;
+    margin-top: 10px;
+}
+
+.cartita {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    border: 2px solid black;
+}
+
+.texto-cartita {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    padding: 3px;
+}
+
+.imagen-cartita {
+    width: 350px;
+    height: 420px;
+}
+
+.boton-cartita {
+    padding: 5px;
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+    box-shadow: 1px 1px grey;
+    transition: 1s;
+}
+
+.boton-cartita:hover {
+    font-size: 1.1rem;
+    background-color: bisque;
+    cursor: pointer;
+}
+
+.container-carrito {
+    height: fit-content;
+    top: 5px;
+    right: 440px;
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+    border: 2px solid black;
+}
+
+.carrito-productos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.productos-carrito {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.texto-carrito {
+    padding: 5px;
+    margin: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.contenedor-total {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin: 3px;
+}
+
+.texto-total {
+    padding: 3px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.contenedor-botones {
+    display: flex;
+}
+
+.boton-eliminar {
+    color: red;
+    padding: 5px;
+    margin-right: 15px;
+    border-radius: 1rem;
+    font-size: 1rem;
+    background-color: white;
+}
+
+.boton-eliminar:hover {
+    font-size: 1.2rem;
+    background-color: bisque;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.boton-comprar {
+    color: green;
+    padding: 5px;
+    margin-right: 15px;
+    border-radius: 1rem;
+    font-size: 1rem;
+    background-color: white;
+}
+
+.boton-comprar:hover {
+    font-size: 1.2rem;
+    background-color: bisque;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*footer*/
+.contenedor-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-top: 2px solid grey;
+}
+
+.texto-container {
+    padding: 5px;
+}
+
+.texto-footer {
+    font-size: 1.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.imagen-footer {
+    margin: 5px;
+}
+
+/*Nosotros-estilos*/
+/*header*/
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid grey;
+}
+
+;
+
+.lista-desordenada {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+
+;
+
+/*main*/
+#contenedor-section {
+    margin-top: 250px;
+    margin-bottom: 290px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto {
+    font-size: 1.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.form-contenedor {
+    display: flex;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    margin: 7px;
+    padding: 3px;
+}
+
+input {
+    margin: 7px;
+    padding: 3px;
+}
+
+.boton-enviar {
+    margin: 10px;
+    padding: 7px;
+    border-radius: 0.5rem;
+}
