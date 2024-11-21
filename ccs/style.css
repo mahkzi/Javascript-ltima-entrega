@@ -43,6 +43,7 @@
 .img:hover {
     cursor: pointer;
 }
+
 .titulo-principal {
     display: flex;
     justify-content: center;
@@ -98,7 +99,7 @@
     cursor: pointer;
 }
 
-.contenedor-carrito{
+.contenedor-carrito {
     height: fit-content;
     top: 5px;
     right: 440px;
@@ -106,13 +107,15 @@
     border-radius: 0.5rem;
     border: 2px solid black;
 }
-.div-productos{
-   display: flex;
-   justify-content: space-between;
-   flex-direction: column;
+
+.div-productos {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
-.p-productos{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+.p-productos {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .boton-eliminar {
@@ -145,7 +148,6 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-/*footer*/
 .contenedor-footer {
     display: flex;
     justify-content: space-around;
@@ -168,8 +170,7 @@
     margin: 5px;
 }
 
-/*Nosotros-estilos*/
-/*header*/
+
 .nav-bar {
     display: flex;
     justify-content: center;
@@ -183,10 +184,6 @@
     flex-direction: row;
     margin: 5px;
 }
-
-;
-
-/*main*/
 #contenedor-section {
     margin-top: 250px;
     margin-bottom: 290px;

@@ -2,43 +2,43 @@ const carritoIcono = document.getElementById("contenedor-icono");
 carritoIcono.addEventListener("click", () => mostrarCarrito());
 function mostrarCarrito() {
     if (carrito.length === 0) {
-        const contenedorCarrito=document.getElementById("contenedor-carrito");
-        contenedorCarrito.className="contenedor-carrito";
-       const carritoVacio=document.createElement("p");
-       carritoVacio.className="carrito-vacio"
-       carritoVacio.innerText="Su carrito esta vacío";
-       contenedorCarrito.appendChild(carritoVacio);
-       setTimeout(() => {
-        location.reload()
-       }, 2000);
+        const contenedorCarrito = document.getElementById("contenedor-carrito");
+        contenedorCarrito.className = "contenedor-carrito";
+        const carritoVacio = document.createElement("p");
+        carritoVacio.className = "carrito-vacio"
+        carritoVacio.innerText = "Su carrito esta vacío";
+        contenedorCarrito.appendChild(carritoVacio);
+        setTimeout(() => {
+            location.reload()
+        }, 2000);
     } else {
-        const contenedorCarrito=document.getElementById("contenedor-carrito");
-        contenedorCarrito.className="contenedor-carrito";
+        const contenedorCarrito = document.getElementById("contenedor-carrito");
+        contenedorCarrito.className = "contenedor-carrito";
         carrito.forEach(el => {
-            const divProductos=document.createElement("div");
-            divProductos.className="div-productos";
-            const nombreProducto=document.createElement("p");
-            nombreProducto.innerText="Producto: " + `${el.nombre}`;
-            nombreProducto.className="p-productos";
-            const cantidadProducto=document.createElement("p");
-            cantidadProducto.className="p-productos"
-            cantidadProducto.innerText="Cantidad: " + `${el.cantidad}`;
+            const divProductos = document.createElement("div");
+            divProductos.className = "div-productos";
+            const nombreProducto = document.createElement("p");
+            nombreProducto.innerText = "Producto: " + `${el.nombre}`;
+            nombreProducto.className = "p-productos";
+            const cantidadProducto = document.createElement("p");
+            cantidadProducto.className = "p-productos"
+            cantidadProducto.innerText = "Cantidad: " + `${el.cantidad}`;
             divProductos.appendChild(nombreProducto);
             divProductos.appendChild(cantidadProducto);
             contenedorCarrito.appendChild(divProductos);
         })
-        const mostrarTotal=document.createElement("div");
-        mostrarTotal.className="mostrar-total";
-        mostrarTotal.innerText="Total: "
+        const mostrarTotal = document.createElement("div");
+        mostrarTotal.className = "mostrar-total";
+        mostrarTotal.innerText = "Total: "
         const precioTotal = document.createElement("p");
-        precioTotal.innerText=""
-        precioTotal.innerText = carrito.reduce((acc, el) => acc + el.precio,0.00);
-        precioTotal.className="precio-total";
+        precioTotal.innerText = ""
+        precioTotal.innerText = carrito.reduce((acc, el) => acc + el.precio, 0.00);
+        precioTotal.className = "precio-total";
         mostrarTotal.appendChild(precioTotal);
         contenedorCarrito.appendChild(mostrarTotal);
-        /*botones*/
+       
         const botonCarrito = document.createElement("div");
-       botonCarrito.className = "contenedor-botones";
+        botonCarrito.className = "contenedor-botones";
         contenedorCarrito.appendChild(botonCarrito);
         const eliminarCarrito = document.createElement("button");
         eliminarCarrito.className = "boton-eliminar";
@@ -74,7 +74,7 @@ function confirmarCompra() {
     }, 3000);
     ;
 }
-// header index
+
 
 const container = document.getElementById("main-container");
 const titulo = document.createElement("h1");
@@ -102,7 +102,7 @@ function cardCreator(producto) {
     boton.innerText = "Comprar";
     boton.className = "boton-cartita";
     boton.addEventListener("click", () => agregarAlCarrito(producto));
-    //agregar la funcion para agregar al carrito
+   
     carta.appendChild(imagen);
     carta.appendChild(nombre);
     carta.appendChild(precio);
@@ -128,7 +128,7 @@ function agregarAlCarrito(producto) {
         Toastify({
 
             text: "Su producto se agregó correctamente al carrito",
-           stylebackground: "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(112,13,233,1) 37%, rgba(0,212,255,1) 100%)",
+            stylebackground: "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(112,13,233,1) 37%, rgba(0,212,255,1) 100%)",
             duration: 3000
 
         }).showToast();
